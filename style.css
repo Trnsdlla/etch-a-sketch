@@ -1,0 +1,18 @@
+.grid-item {
+    background-color: aquamarine;
+    height: 55px;
+    width: 60px;
+}
+
+/* I did this via event handler by javascript, 
+css declaration is cheating :) */
+
+/* .grid-item:hover {
+    background-color: black;
+} */
+
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+}
