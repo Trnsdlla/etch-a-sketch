@@ -1,7 +1,13 @@
 function gridGeneration() {
-    let gridSize = parseInt(prompt("Enter # of squares per side for your new grid.", 16));
+    let gridSize = parseInt(prompt("Enter # of squares per side for your new grid.", 0));
 
     if (gridSize >= 1 && gridSize <= 100) {
+        // Clear existing grid items
+        while(gridContainer.firstChild) {
+            gridContainer.removeChild(gridContainer.firstChild);
+        }
+
+        // Generate new grid items
         for (let i = 1; i <= (gridSize * gridSize); i++) {
             const div = document.createElement("div");
             div.classList.add("grid-item");
