@@ -14,3 +14,9 @@ css declaration is cheating :) */
     flex-wrap: wrap;
     width: 960px;
 }
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
