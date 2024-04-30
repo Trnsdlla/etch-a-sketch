@@ -1,6 +1,6 @@
-let gridSize = parseInt(prompt("Enter # of squares per side for your new grid.", 16))
-
 function gridGeneration() {
+    let gridSize = parseInt(prompt("Enter # of squares per side for your new grid.", 16));
+
     if (gridSize >= 1 && gridSize <= 100) {
         for (let i = 1; i <= (gridSize * gridSize); i++) {
             const div = document.createElement("div");
@@ -12,7 +12,6 @@ function gridGeneration() {
     };
 };
 
-
 const gridContainer = document.getElementById("grid-container");
 
 gridContainer.addEventListener("mousemove", function(event) {
@@ -21,7 +20,24 @@ gridContainer.addEventListener("mousemove", function(event) {
     }
 });
 
-gridGeneration();
+let userInputButton = document.createElement("button");
+userInputButton.id = "userInputButton";
+
+userInputButton.textContent = "Generate Grid";
+userInputButton.style.cssText = `
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 20px;
+`;
+
+const buttonContainer = document.getElementById("button-container");
+buttonContainer.appendChild(userInputButton);
+
+
+document.getElementById("userInputButton").addEventListener("click", function() {
+    gridGeneration();
+});
 
 // function createGrid() {
 //     for (let i = 1; i <= 256; i++) {
